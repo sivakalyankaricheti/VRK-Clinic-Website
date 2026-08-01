@@ -7,12 +7,27 @@ const form = document.querySelector('#appointment-form');
 const confirmation = document.querySelector('.form-success');
 const dateField = form.querySelector('[name="date"]');
 dateField.min = new Date().toISOString().split('T')[0];
-form.addEventListener('submit', event => {
+
+form.addEventListener('submit', async event => {
   event.preventDefault();
-  const data = new FormData(form);
-  const name = data.get('name'), phone = data.get('phone'), email = data.get('email'), date = data.get('date'), message = data.get('message') || 'Not provided';
-  const details = `Appointment request%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0APreferred date: ${encodeURIComponent(date)}%0AConcern: ${encodeURIComponent(message)}`;
-  window.open(`https://wa.me/919701218130?text=${details}`, '_blank', 'noopener');
-  confirmation.textContent = 'Your appointment request is ready in WhatsApp. Please send the message to confirm.';
-  confirmation.textContent = 'Your request is ready in WhatsApp and email. Please send both messages to confirm.';
+  const submitButton = form.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending request…';
+  confirmation.textContent = '';
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+    if (!response.ok) throw new Error('Unable to send request');
+    form.reset();
+    dateField.min = new Date().toISOString().split('T')[0];
+    confirmation.textContent = 'Thank you — your appointment request has been sent to Dr. Rekha.';
+  } catch (error) {
+    confirmation.textContent = 'We could not send your request. Please call +91 97012 18130.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = 'Send appointment request <span>→</span>';
+  }
 });
