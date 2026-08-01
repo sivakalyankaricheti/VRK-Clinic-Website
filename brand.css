@@ -1,0 +1,5 @@
+/* VRK Clinic brand refinements */
+.brand-mark{display:flex;align-items:center;justify-content:center;gap:0;border:1px solid var(--ink);border-radius:50%;height:42px;width:42px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:-.24em;padding-right:5px;color:var(--ink)}
+.brand-mark i{font-style:normal;font-size:15px;color:var(--gold);transform:translateY(1px)}
+.brand-mark b{font-size:21px;z-index:1;color:var(--ink)}
+.hero-image img{object-position:center 30%}

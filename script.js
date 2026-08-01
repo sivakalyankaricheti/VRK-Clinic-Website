@@ -12,8 +12,7 @@ form.addEventListener('submit', event => {
   const data = new FormData(form);
   const name = data.get('name'), phone = data.get('phone'), email = data.get('email'), date = data.get('date'), message = data.get('message') || 'Not provided';
   const details = `Appointment request%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0APreferred date: ${encodeURIComponent(date)}%0AConcern: ${encodeURIComponent(message)}`;
-  // Replace the email address and WhatsApp number below with the clinic's real contact details before publishing.
-  window.open(`https://wa.me/919000000000?text=${details}`, '_blank', 'noopener');
-  window.location.href = `mailto:hello@rekhaclinic.com?subject=${encodeURIComponent('Appointment request from ' + name)}&body=${details}`;
+  window.open(`https://wa.me/919701218130?text=${details}`, '_blank', 'noopener');
+  confirmation.textContent = 'Your appointment request is ready in WhatsApp. Please send the message to confirm.';
   confirmation.textContent = 'Your request is ready in WhatsApp and email. Please send both messages to confirm.';
 });
