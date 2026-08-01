@@ -20,3 +20,4 @@ footer{background:linear-gradient(100deg,#d8f0e6,#eaf7f1);color:#285854}footer .
 @keyframes rise-in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes soft-zoom{from{transform:scale(1)}to{transform:scale(1.045)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.button.primary:hover,.service-grid article:hover{transform:none}}
 @media(max-width:850px){.hero-image{clip-path:none}.service-grid article:hover{padding:30px 25px 0 0}.service-grid article+article:hover{padding-left:25px}}
+.contact-details{gap:17px;font-size:16px;line-height:1.65}.contact-details span{font-size:22px;width:32px}.contact-details p{font-size:15px;line-height:1.7}.contact-details a{font-weight:600}footer p,footer>div{font-size:14px}
