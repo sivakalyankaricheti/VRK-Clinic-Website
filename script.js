@@ -8,7 +8,7 @@ const confirmation = document.querySelector('.form-success');
 const dateField = form.querySelector('[name="date"]');
 dateField.min = new Date().toISOString().split('T')[0];
 
-const clinicAddress = "DJ's Heights, MIG-132/1, Kukatpally Housing Board Colony, K P H B Phase 1, Kukatpally, Hyderabad, Telangana 500072, India";
+const clinicAddress = "Rekha Clinic, DJ's Heights, MIG-132/1, Kukatpally Housing Board Colony, K P H B Phase 1, Kukatpally, Hyderabad, Telangana 500072, India";
 const mapsQuery = encodeURIComponent(clinicAddress);
 document.querySelector('.contact-details').insertAdjacentHTML('beforeend', `
   <a class="clinic-map" href="https://www.google.com/maps/search/?api=1&query=${mapsQuery}" target="_blank" rel="noopener" aria-label="Open VRK Clinic location in Google Maps">
