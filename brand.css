@@ -1,22 +1,22 @@
-/* Contemporary VRK Clinic visual system */
-body{background:linear-gradient(135deg,#fdfbf7 0%,#f4f8f4 48%,#edf6f2 100%)}
-header{backdrop-filter:blur(18px);background:#fbf9f5e8;border-bottom:1px solid #d8e4dc}
-.topbar{background:linear-gradient(105deg,#102d2c,#285c54 58%,#417365)}
-.brand-mark{display:flex;align-items:center;justify-content:center;gap:0;border:1px solid var(--ink);border-radius:13px;height:42px;width:42px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:-.24em;padding-right:5px;color:var(--ink);background:linear-gradient(135deg,#fff 0%,#cfe5d7 100%);box-shadow:0 6px 18px #13342b22;transform:rotate(-6deg)}
-.brand-mark i{font-style:normal;font-size:15px;color:var(--gold);transform:translateY(1px)}
-.brand-mark b{font-size:21px;z-index:1;color:var(--ink)}
-.hero{position:relative;background:radial-gradient(circle at 22% 28%,#fff 0%,#f7f3ec 43%,#e0eee6 100%)}
-.hero-copy{animation:rise-in .85s cubic-bezier(.2,.8,.2,1) both}.hero-image{clip-path:polygon(9% 0,100% 0,100% 100%,0 100%,0 11%)}
-.hero-image img{object-position:center 30%;animation:soft-zoom 12s ease-in-out infinite alternate}.hero-image:after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(160deg,transparent 60%,#133c3238)}
-.experience-card{border-radius:4px;border:1px solid #e7eee8;animation:float 3.5s ease-in-out infinite}
-.button.primary{background:linear-gradient(115deg,#193b38,#2b665a);box-shadow:0 12px 24px #173b3233}.button.primary:hover{transform:translateY(-2px);box-shadow:0 16px 28px #173b3240}
-.intro,.gallery-section{background:#fffc}.expertise{background:linear-gradient(135deg,#dce8df,#c8dfd1)}
-.service-grid article{transition:transform .25s ease,background .25s ease}.service-grid article:hover{transform:translateY(-9px);background:#f6fbf7;padding:30px 20px 15px}.service-grid article+article:hover{padding-left:25px}
-.gallery figure{border-radius:5px;box-shadow:0 12px 26px #163a3020}.gallery img{filter:saturate(.92) contrast(1.04)}
-.interviews{position:relative;overflow:hidden}.interviews:before{content:'';position:absolute;width:500px;height:500px;border:1px solid #ffffff1f;border-radius:50%;right:-210px;top:-280px}.video-wrap{border-radius:8px;overflow:hidden;box-shadow:0 24px 45px #0004}
-.appointment{background:linear-gradient(135deg,#fffaf3,#e7f1ea)}form{border-radius:7px;box-shadow:0 18px 42px #18362b14}.contact-details a{word-break:break-word}
-@keyframes rise-in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes soft-zoom{from{transform:scale(1)}to{transform:scale(1.045)}}
+/* Light, contemporary VRK Clinic visual system */
+:root{--ink:#245453;--cream:#fffdf9;--sage:#e7f5ef;--gold:#d99a72;--muted:#637a78}
+body{background:linear-gradient(135deg,#fffefd 0%,#f8fffc 48%,#edf9f5 100%)}
+.topbar{background:linear-gradient(105deg,#cfeae0,#dff2eb 60%,#f5e7da);color:#285854}.topbar a{color:#285854}
+header{backdrop-filter:blur(18px);background:#fffffff0;border-bottom:1px solid #dceee7;box-shadow:0 4px 20px #5b94870d}
+.brand-mark{display:flex;align-items:center;justify-content:center;gap:0;border:1px solid #c6e4d8;border-radius:13px;height:42px;width:42px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:-.24em;padding-right:5px;color:var(--ink);background:linear-gradient(135deg,#fff 0%,#def5ea 100%);box-shadow:0 6px 18px #4c9a7b18;transform:rotate(-6deg)}
+.brand-mark i{font-style:normal;font-size:15px;color:var(--gold);transform:translateY(1px)}.brand-mark b{font-size:21px;z-index:1;color:var(--ink)}
+.hero{position:relative;background:radial-gradient(circle at 22% 28%,#fff 0%,#fffcf6 42%,#e6f7ef 100%)}.hero:before{content:'';position:absolute;width:240px;height:240px;border-radius:50%;background:#fceadf;opacity:.55;left:3%;bottom:9%;filter:blur(2px)}
+.hero-copy{position:relative;z-index:1;animation:rise-in .85s cubic-bezier(.2,.8,.2,1) both}.hero-image{clip-path:polygon(9% 0,100% 0,100% 100%,0 100%,0 11%);background:#dff4eb}.hero-image img{object-position:center 30%;animation:soft-zoom 12s ease-in-out infinite alternate}.hero-image:after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(160deg,transparent 60%,#70b89e22)}
+.experience-card{border-radius:8px;border:1px solid #eef8f3;box-shadow:0 16px 36px #4a8b7420;animation:float 3.5s ease-in-out infinite}.experience-card .cross{color:#d99a72}
+.button.primary{background:linear-gradient(115deg,#4a9b83,#68b69c);box-shadow:0 12px 24px #5aa78c35}.button.primary:hover{background:linear-gradient(115deg,#3c8973,#58a88e);transform:translateY(-2px);box-shadow:0 16px 28px #5aa78c45}
+.nav-cta{background:#eaf8f2;color:#245453;border:1px solid #c8e9dc}.nav-cta:hover{background:#d8f0e6;color:#245453}
+.intro,.gallery-section{background:#fffffff2}.expertise{background:linear-gradient(135deg,#e4f6ed,#f4fbf7)}
+.service-grid{border-color:#c8e8da}.service-grid article{border-color:#c8e8da;transition:transform .25s ease,background .25s ease,box-shadow .25s ease}.service-grid article:hover{transform:translateY(-9px);background:#fff;box-shadow:0 14px 28px #5b9d8120;padding:30px 20px 15px}.service-grid article+article:hover{padding-left:25px}
+.journey{background:#f8fcf9}.journey-photo img{filter:brightness(1.06) saturate(.9)}.timeline article{border-color:#dcebe4}
+.gallery figure{border-radius:8px;box-shadow:0 12px 26px #4c8d7320}.gallery img{filter:saturate(.9) contrast(1.02)}.gallery figure:hover img{transform:scale(1.06)}
+.interviews{position:relative;overflow:hidden;background:linear-gradient(125deg,#dcf4e9,#cbeee0);color:#245453}.interviews>div>p:not(.eyebrow){color:#527370}.interviews:before{content:'';position:absolute;width:520px;height:520px;border:1px solid #ffffffaa;border-radius:50%;right:-210px;top:-280px}.interviews .dark{background:#f5b990;color:#653f2a}.video-wrap{border-radius:10px;overflow:hidden;box-shadow:0 24px 45px #4e90752d}.video-caption{box-shadow:0 7px 22px #5a9c8026}
+.appointment{background:linear-gradient(135deg,#fffaf5,#e7f7ef)}form{background:#ffffffdb;border:1px solid #d9eee4;border-radius:10px;box-shadow:0 18px 42px #4c94761a}.contact-details{border-color:#d2e9de}.contact-details a{word-break:break-word}.form-success{font-weight:600}
+footer{background:linear-gradient(100deg,#d8f0e6,#eaf7f1);color:#285854}footer .brand{color:#245453}footer p{color:#597b75}
+@keyframes rise-in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes soft-zoom{from{transform:scale(1)}to{transform:scale(1.045)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.button.primary:hover,.service-grid article:hover{transform:none}}
 @media(max-width:850px){.hero-image{clip-path:none}.service-grid article:hover{padding:30px 25px 0 0}.service-grid article+article:hover{padding-left:25px}}
