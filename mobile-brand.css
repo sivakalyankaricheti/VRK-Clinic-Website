@@ -1,4 +1,10 @@
+.topbar-track,.topbar-track > div{display:flex;align-items:center;gap:30px}.topbar-track > div:nth-child(2){display:none}
 @media (max-width: 500px) {
+  .topbar { display: block; overflow: hidden; padding: 9px 0; white-space: nowrap; }
+  .topbar-track { display: flex; width: max-content; animation: topbar-scroll 15s linear infinite; }
+  .topbar-track > div { display: flex; align-items: center; gap: 20px; padding-right: 20px; }
+  .topbar-track > div:nth-child(2) { display: flex; }
+  .topbar-track span:first-child { display: inline !important; }
   header { height: 88px; }
   header nav { top: 88px; }
   header .brand { font-size: 21px; gap: 12px; }
@@ -11,4 +17,13 @@
   footer .brand-mark i { font-size: 20px; }
   footer .brand-mark b { font-size: 29px; }
   footer .brand small { font-size: 8px; letter-spacing: .2em; }
+}
+
+@keyframes topbar-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topbar-track { animation: none; }
 }
