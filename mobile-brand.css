@@ -5,6 +5,7 @@
   .topbar-track > div { display: flex; align-items: center; gap: 20px; padding-right: 20px; }
   .topbar-track > div:nth-child(2) { display: flex; }
   .topbar-track span:first-child { display: inline !important; }
+  .topbar-track span:last-child { display: inline !important; }
   header { height: 88px; }
   header nav { top: 88px; }
   header .brand { font-size: 21px; gap: 12px; }
